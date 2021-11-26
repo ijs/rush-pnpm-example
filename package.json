@@ -1,0 +1,7 @@
+{
+  "name": "root",
+  "private": true,
+  "scripts": {
+    "publish": "rush change && rush publish -a -p"
+  }
+}

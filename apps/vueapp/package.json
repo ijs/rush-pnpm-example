@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
+    "prebuild": "rm -fr dist && echo 'hi'",
     "build": "vite build",
     "serve": "vite preview"
   },

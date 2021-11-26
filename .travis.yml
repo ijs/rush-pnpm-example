@@ -13,6 +13,6 @@ script:
   - node common/scripts/install-run-rush.js install
   - echo -en 'travis_fold:end:install\\r'
 
-  - echo 'Building...' && echo -en 'travis_fold:start:build\\r'
-  - node common/scripts/install-run-rush.js rebuild --verbose
+  - echo 'Building...' && echo -en 'Main App start:build\\r'
+  - node common/scripts/install-run-rush.js build -p 3 -i vueapp -v
   - echo -en 'travis_fold:end:build\\r'
