@@ -1,9 +1,9 @@
 language: node_js
 node_js:
-  - '14.15.0'
+  - "14.15.0"
 
 script:
-  - node common/scripts/install-run-rush.js rebuild -p 3 -i vueapp -v
+  - npm run build
 sudo: false
 
 deploy:
