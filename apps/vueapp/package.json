@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "vite",
     "prebuild": "rm -fr dist && echo 'hi'",
-    "build": "vite build --emptyOutDir",
+    "build": "BASE=rush-pnpm-example vite build --emptyOutDir",
     "serve": "vite preview"
   },
   "dependencies": {
