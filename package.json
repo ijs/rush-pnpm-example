@@ -2,6 +2,8 @@
   "name": "root",
   "private": true,
   "scripts": {
-    "publish": "rush change && rush publish -a -p"
+    "preinstall": "node common/scripts/install-run-rush.js install",
+    "build": "buildDir=build node common/scripts/install-run-rush.js build -p 3 -i vueapp -v",
+    "local:publish": "rush change && rush publish -a -p"
   }
 }
