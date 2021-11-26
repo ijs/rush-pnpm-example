@@ -9,6 +9,7 @@ export default defineConfig({
   plugins: [vue()],
   build:{
     outDir: Path.resolve(process.cwd(), '../../','docs'),//Specify the output directory (relative to project root).
+    assetsDir: BASE
   },
   base: isProd ? '/' : `/${BASE}`
 })
