@@ -6,9 +6,8 @@
   },
   "scripts": {
     "preinstall": "node common/scripts/install-run-rush.js install",
-    "build:build": "buildDir=build node common/scripts/install-run-rush.js build -p 3 -i vueapp -v",
-    "build": "NODE_ENV=production rm -fr docs && node common/scripts/install-run-rush.js build -p 3 -i vueapp -v",
-    "build:force": "NODE_ENV=production rm -fr docs && node common/scripts/install-run-rush.js rebuild -p 3 -i vueapp -v",
+    "build": "NODE_ENV=production BASE=rush-pnpm-example rm -fr docs && node common/scripts/install-run-rush.js build -p 3 -i vueapp -v",
+    "build:force": "NODE_ENV=production BASE=rush-pnpm-example rm -fr docs && node common/scripts/install-run-rush.js rebuild -p 3 -i vueapp -v",
     "local:publish": "rush change && rush publish -a -p"
   }
 }
