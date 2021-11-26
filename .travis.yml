@@ -2,21 +2,7 @@ language: node_js
 node_js:
   - '14.15.0'
 script:
-  - set -e
-
-  - echo 'Checking for missing change logs...' && echo -en 'travis_fold:start:change\\r'
-  - git fetch origin master:refs/remotes/origin/master -a
-  - node common/scripts/install-run-rush.js change -v
-  - echo -en 'travis_fold:end:change\\r'
-
-  - echo 'Installing...' && echo -en 'travis_fold:start:install\\r'
-  - node common/scripts/install-run-rush.js install
-  - echo -en 'travis_fold:end:install\\r'
-
-  - echo 'Building...' && echo -en 'Main App start:build\\r'
   - node common/scripts/install-run-rush.js rebuild -p 3 -i vueapp -v
-  - echo -en 'travis_fold:end:build\\r'
-
 
 deploy:
   provider: pages
@@ -24,7 +10,7 @@ deploy:
   github-token: $GITHUB_TOKEN  # Set in travis-ci.com dashboard, marked secure
   keep-history: true
   local-dir: docs
-  target-branch: gh-pages # deploy target branch
+#  target-branch: gh-pages # deploy target branch
   verbose: true
   on:
     branch: master
