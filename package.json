@@ -1,6 +1,9 @@
 {
   "name": "root",
   "private": true,
+  "engines": {
+    "node": ">=12.13.0 <13.0.0 || >=14.15.0 <15.0.0"
+  },
   "scripts": {
     "preinstall": "node common/scripts/install-run-rush.js install",
     "build": "buildDir=build node common/scripts/install-run-rush.js build -p 3 -i vueapp -v",
